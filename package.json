@@ -1,0 +1,26 @@
+{
+  "name": "martin-proxy-server",
+  "version": "1.0.0",
+  "description": "Proxy server for restaurant details component",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrla26-fec-table-it/martin-proxy-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hrla26-fec-table-it/martin-proxy-server/issues"
+  },
+  "homepage": "https://github.com/hrla26-fec-table-it/martin-proxy-server#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.9"
+  }
+}
