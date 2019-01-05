@@ -1,0 +1,11 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f2f4;
+  margin: 0px;
+}
+
+#nav {
+  background-color: white;
+}
