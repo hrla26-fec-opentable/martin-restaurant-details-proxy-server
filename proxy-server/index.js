@@ -34,7 +34,7 @@ proxy.get('/api/nav/:metro', (req, res) => {
 proxy.get('/api/search/:searched', (req, res) => {
   const { searched } = req.params;
   // axios.get(`http://127.0.0.1:9004/api/search/${searched}`)
-  axios.get(`http://3.86.82.182:9004/api/nav/${searched}`)
+  axios.get(`http://3.86.82.182:9004/api/search/${searched}`)
     .then(({data}) => {
       res.send(data);
     });
