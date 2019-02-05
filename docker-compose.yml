@@ -1,0 +1,39 @@
+version: '3'
+services:
+  proxy:
+    build: .
+    ports:
+      - "9000:9000"
+  reviews:
+    image: martinmhan/fecmartinreviews
+    depends_on:
+      - database
+    ports:
+      - "9001:9001"
+  details:
+    image: martinmhan/fecjjdetails
+    depends_on:
+      - database
+    ports:
+      - "9002:9002"
+  nav:
+    image: martinmhan/fecjaynav
+    depends_on:
+      - database
+    ports:
+      - "9004:9004"
+  photos:
+    image: martinmhan/fecsrisphotos
+    depends_on:
+      - database
+    ports:
+      - "9003:9003"
+  database:
+    image: mysql
+    ports:
+      - "3306:3306"
+      - "33060:33060"
+    environment:
+      - MYSQL_ROOT_PASSWORD="password"
+      - MYSQL_USER="root"
+      - MYSQL_PASSWORD="password"
