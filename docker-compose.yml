@@ -1,0 +1,30 @@
+version: '3'
+services:
+  proxy:
+    build: .
+    ports:
+      - "9000:9000"
+  reviews:
+    image: martinmhan/fecmartinreviews
+    depends_on:
+      - proxy
+    ports:
+      - "9001:9001"
+  details:
+    image: martinmhan/fecjjdetails
+    depends_on:
+      - proxy
+    ports:
+      - "9002:9002"
+  nav:
+    image: martinmhan/fecjaynav
+    depends_on:
+      - proxy
+    ports:
+      - "9004:9004"
+  photos:
+    image: martinmhan/fecsrisphotos
+    depends_on:
+      - proxy
+    ports:
+      - "9003:9003"
